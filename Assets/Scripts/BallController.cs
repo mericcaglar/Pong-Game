@@ -11,24 +11,36 @@ public class BallController : MonoBehaviour
     private Vector2 direction;
 
     private Rigidbody2D rb;
-    // Start is called before the first frame update
+
+    private Vector2 screenBounds;
+
+   
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        direction = new Vector2(Random.Range(-1,1),Random.Range(-1,1));
-    }
+        direction = Vector2.one.normalized;
+        screenBounds =
+            Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+       
+        }
 
-    // Update is called once per frame
-    private void FixedUpdate()
+     void FixedUpdate()
     {
         rb.velocity = direction * speed;
+        
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             direction.x = -direction.x;
+           
+        }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            direction.y = -direction.y;
         }
         
     }
