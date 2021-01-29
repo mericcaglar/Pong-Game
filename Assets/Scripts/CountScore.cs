@@ -4,33 +4,38 @@ using UnityEngine;
 using UnityEngine.UI;
 public class CountScore : MonoBehaviour
 {
-    public Text ScoreBoard;
+    public Text CompScoreBoard;
+    public Text PlayerScoreBoard;
     public GameObject ball;
     
     private int PlayerScore = 0;
     private int ComputerScore = 0;
-    // Start is called before the first frame update
+    
+    private Vector2 screenBounds;
+    
     void Start()
     {
-        ball = GameObject.Find("Ball");
+        screenBounds =
+            Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        /* TOPUN EKRANDAN ÇIKTIĞINDA BAŞLANGICA GERİ DÖNMESİNİ KONTROL EDEN 
-        KOD SATIRI BURAYA DA YAZILACAK */
-        if (ball.transform.position.x >= 10f)
+        if (ball.transform.position.x >= screenBounds.x)
         {
             PlayerScore++;
+            ball.transform.position = new Vector3(0f, 0f, 0f);
         }
 
-        if (ball.transform.position.x <= -10f)
+        if (ball.transform.position.x <= screenBounds.x * -1)
         {
             ComputerScore++;
+            ball.transform.position = new Vector3(0f, 0f, 0f);
         }
 
-        ScoreBoard.text = PlayerScore.ToString() + " - " + ComputerScore.ToString(); 
+        CompScoreBoard.text = ComputerScore.ToString(); 
+        PlayerScoreBoard.text = PlayerScore.ToString(); 
         print("Skor: " + PlayerScore + " , " + ComputerScore);
     }
 }

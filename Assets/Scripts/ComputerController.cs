@@ -9,7 +9,7 @@ public class ComputerController : MonoBehaviour
     
     void Update()
     {
-        pos = new Vector2(transform.position.x,ball.transform.position.y);
+        pos = new Vector2(transform.position.x,ball.transform.position.y*0.5f);
         transform.position = pos;
     }
 }
