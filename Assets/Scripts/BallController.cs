@@ -14,6 +14,8 @@ public class BallController : MonoBehaviour
 
     private Vector2 screenBounds;
 
+    public GameObject ball;
+
    
     
     void Start()
@@ -23,9 +25,23 @@ public class BallController : MonoBehaviour
         screenBounds =
             Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
        
+        ball = GameObject.Find("Ball");
         }
 
-     void FixedUpdate()
+    private void Update()
+    {
+        if (ball.transform.position.x >= 10f)
+        {
+            this.transform.position = new Vector3(0f, 0f, 0f);
+        }
+
+        if (ball.transform.position.x <= -10f)
+        {
+            this.transform.position = new Vector3(0f, 0f, 0f);
+        }
+    }
+
+    void FixedUpdate()
     {
         rb.velocity = direction * speed;
         
@@ -42,6 +58,5 @@ public class BallController : MonoBehaviour
         {
             direction.y = -direction.y;
         }
-        
     }
 }
