@@ -547,6 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1261549365}
   - component: {fileID: 1261549366}
+  - component: {fileID: 1261549367}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -583,6 +584,21 @@ MonoBehaviour:
   CompScoreBoard: {fileID: 347707305}
   PlayerScoreBoard: {fileID: 1672156956}
   ball: {fileID: 1805244982}
+--- !u!114 &1261549367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261549364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4caa1a16f6584cf795f9cc848ccb9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillBall:
+  - {fileID: 7645837730261606655, guid: f034527ab47d141fd81b139faf048002, type: 3}
+  isSkillBallOnScreen: 0
 --- !u!1 &1565028552
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +759,7 @@ GameObject:
   - component: {fileID: 1805244983}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -817,7 +833,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b1df0ddd5850740ffb9f3a903e9e75f6, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -839,7 +855,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -878,7 +894,7 @@ GameObject:
   - component: {fileID: 2080969817}
   m_Layer: 0
   m_Name: Computer2D
-  m_TagString: Player
+  m_TagString: Computer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

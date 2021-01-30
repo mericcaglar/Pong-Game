@@ -8,9 +8,11 @@
           <e p="BallController.cs" t="Include" />
           <e p="ComputerController.cs" t="Include" />
           <e p="CountScore.cs" t="Include" />
+          <e p="DeploySkill.cs" t="Include" />
           <e p="InstantiateWall.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ScreenBounds.cs" t="Include" />
+          <e p="SkillGenerator.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
