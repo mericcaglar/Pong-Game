@@ -255,7 +255,7 @@ Transform:
   m_GameObject: {fileID: 255132097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.189998, y: 0, z: 0}
-  m_LocalScale: {x: 0.4271735, y: 3.273737, z: 1}
+  m_LocalScale: {x: 0.42, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -598,6 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillBall:
   - {fileID: 7645837730261606655, guid: f034527ab47d141fd81b139faf048002, type: 3}
+  - {fileID: 3235805116615259357, guid: 9a8cce9eb56224d2e8494670a04fd2b0, type: 3}
   isSkillBallOnScreen: 0
 --- !u!1 &1565028552
 GameObject:
@@ -757,6 +758,7 @@ GameObject:
   - component: {fileID: 1805244985}
   - component: {fileID: 1805244984}
   - component: {fileID: 1805244983}
+  - component: {fileID: 1805244988}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -879,6 +881,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805244988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805244982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b965b6695b22546f8a614a83bee995ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 255132097}
+  computerObj: {fileID: 2080969816}
 --- !u!1 &2080969816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1027,7 @@ Transform:
   m_GameObject: {fileID: 2080969816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.19, y: 0, z: 0}
-  m_LocalScale: {x: 0.4271735, y: 3.273737, z: 1}
+  m_LocalScale: {x: 0.4271735, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3

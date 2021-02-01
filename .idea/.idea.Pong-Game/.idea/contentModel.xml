@@ -5,6 +5,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="ApplySkill.cs" t="Include" />
           <e p="BallController.cs" t="Include" />
           <e p="ComputerController.cs" t="Include" />
           <e p="CountScore.cs" t="Include" />

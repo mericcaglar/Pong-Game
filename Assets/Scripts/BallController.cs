@@ -36,8 +36,9 @@ public class BallController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Computer") )
         {
             direction.x = -direction.x;
-            if (this.gameObject.GetComponent<SpriteRenderer>().color.GetHashCode().ToString() != "#474747")
+            if (this.gameObject.GetComponent<SpriteRenderer>().color.ToString() != "RGBA(0.278, 0.278, 0.278, 1.000)")
             {
+                this.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.278f, 0.278f, 0.278f, 1);
                 
             }
         }

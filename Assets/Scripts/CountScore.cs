@@ -35,7 +35,6 @@ public class CountScore : MonoBehaviour
         }
 
         CompScoreBoard.text = ComputerScore.ToString(); 
-        PlayerScoreBoard.text = PlayerScore.ToString(); 
-        print("Skor: " + PlayerScore + " , " + ComputerScore);
+        PlayerScoreBoard.text = PlayerScore.ToString();
     }
 }
