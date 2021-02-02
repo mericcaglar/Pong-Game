@@ -597,8 +597,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillBall:
-  - {fileID: 7645837730261606655, guid: f034527ab47d141fd81b139faf048002, type: 3}
-  - {fileID: 3235805116615259357, guid: 9a8cce9eb56224d2e8494670a04fd2b0, type: 3}
   - {fileID: 7623719585712178734, guid: f868271de879e4936ad509afd9debfb2, type: 3}
   isSkillBallOnScreen: 0
 --- !u!1 &1565028552

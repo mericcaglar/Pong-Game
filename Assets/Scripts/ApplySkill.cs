@@ -35,6 +35,11 @@ public class ApplySkill : MonoBehaviour
                 StartCoroutine(resetWidth(this.gameObject));
                 
             }
+            //Rakibin çubuğunu dondurur
+            if (getColor == "RGBA(0.950, 0.610, 0.070, 1.000)")
+            {
+                StartCoroutine(freezePlayer(computerObj));
+            }
         }
         if (collision.gameObject.CompareTag("Computer"))
         {
@@ -51,6 +56,11 @@ public class ApplySkill : MonoBehaviour
                 StartCoroutine(resetWidth(this.gameObject));
                 
             }
+            //Rakibin çubuğunu dondurur
+            if (getColor == "RGBA(0.950, 0.610, 0.070, 1.000)")
+            {
+                StartCoroutine(freezePlayer(playerObj));
+            }
         }
     }
 
@@ -64,6 +74,18 @@ public class ApplySkill : MonoBehaviour
         else
         {
             this.gameObject.transform.localScale = new Vector3(0.5f,0.5f,1);
+            
         }
+    }
+
+    IEnumerator freezePlayer(GameObject gameObject)
+    {
+        for(;;)
+        {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x,0,1);
+            yield return new WaitForSeconds(4);
+            yield break;
+        }
+        
     }
 }
