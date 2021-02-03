@@ -28,7 +28,7 @@ public class BallController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = direction * speed;
-        
+        CountScore.canAddScore = true;
     }
 
      void OnCollisionEnter2D(Collision2D collision)
@@ -46,5 +46,6 @@ public class BallController : MonoBehaviour
         {
             direction.y = -direction.y;
         }
+        
     }
 }

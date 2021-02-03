@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\Casper\AppData\local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Casper\AppData\local\JetBrains\Rider2020.3\resharper-host\local\Transient\Rider\v203\SolutionCaches\_Pong-Game.-1722470825.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Casper\Desktop\Yeni klasör\Pong-Game" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
@@ -11,6 +13,7 @@
           <e p="CountScore.cs" t="Include" />
           <e p="DeploySkill.cs" t="Include" />
           <e p="InstantiateWall.cs" t="Include" />
+          <e p="MenuController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ScreenBounds.cs" t="Include" />
           <e p="SkillGenerator.cs" t="Include" />
@@ -19,9 +22,7 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Pong-Game.sln" t="IncludeFlat" />
-      <e p="Temp/Bin" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_Pong-Game.-277615330.00" t="ExcludeRecursive" />
   </component>
 </project>
