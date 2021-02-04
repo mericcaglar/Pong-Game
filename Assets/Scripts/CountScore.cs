@@ -39,21 +39,16 @@ public class CountScore : MonoBehaviour
             ball.transform.position = new Vector3(0f, 0f, 0f);
         }
 
-        if (PlayerScore >= 1) 
+        if (PlayerScore >= 5) 
         {
             SceneManager.LoadScene (2);
         }
 
-        if (ComputerScore >= 1)
+        if (ComputerScore >= 5)
         {
             SceneManager.LoadScene (3);
         }
         
-        
-        
-        
-        
-
         CompScoreBoard.text = ComputerScore.ToString(); 
         PlayerScoreBoard.text = PlayerScore.ToString();
     }

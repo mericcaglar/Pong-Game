@@ -9,7 +9,7 @@ public class CloneBall : MonoBehaviour
     private Vector2 screenBounds;
     private Vector2 direction;
     private Rigidbody2D rb;
-    public float speed = 7;
+    public float speed = 10;
     
     void Start()
     {
