@@ -8,6 +8,7 @@ TagManager:
   - skillBall
   - Ball
   - Computer
+  - BallClone
   layers:
   - Default
   - TransparentFX

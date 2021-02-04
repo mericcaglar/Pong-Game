@@ -16,6 +16,12 @@ public class SkillGenerator : MonoBehaviour
         screenBounds =
             Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         isSkillBallOnScreen = false;
+        Debug.Log("+X ekseni: "+ screenBounds.x);
+        Debug.Log("-X ekseni: "+ screenBounds.x*-1);
+        Debug.Log("----------------------------------------");
+        Debug.Log("+Y ekseni: "+ screenBounds.y);
+        Debug.Log("-Y ekseni: "+ screenBounds.y*-1);
+        
     }
 
     
@@ -37,7 +43,7 @@ public class SkillGenerator : MonoBehaviour
 
     IEnumerator spawnSkill(){
         yield return new WaitForSeconds(5);
-        Instantiate(skillBall[Random.Range(0,skillBall.Length)], new Vector3(Random.Range(-screenBounds.x,screenBounds.x),Random.Range(-screenBounds.y,screenBounds.y)), Quaternion.identity);
+        Instantiate(skillBall[Random.Range(0,skillBall.Length)], new Vector3(Random.Range(-screenBounds.x+2f,screenBounds.x-2f),Random.Range(-screenBounds.y+2f,screenBounds.y-2f)), Quaternion.identity);
     }
     
     

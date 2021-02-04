@@ -9,6 +9,7 @@ public class ApplySkill : MonoBehaviour
     private string getColor;
     public GameObject playerObj;
     public GameObject computerObj;
+    public GameObject cloneBall;
     
 
     void Update()
@@ -35,10 +36,13 @@ public class ApplySkill : MonoBehaviour
                 StartCoroutine(resetWidth(this.gameObject));
                 
             }
-            //Rakibin çubuğunu dondurur
+            //Topu çoğaltır
             if (getColor == "RGBA(0.950, 0.610, 0.070, 1.000)")
             {
-                StartCoroutine(freezePlayer(computerObj));
+                for (int i = 0; i < 2; i++)
+                {
+                     Instantiate(cloneBall, new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,gameObject.transform.position.z), Quaternion.identity);
+                }
             }
         }
         if (collision.gameObject.CompareTag("Computer"))
@@ -56,10 +60,13 @@ public class ApplySkill : MonoBehaviour
                 StartCoroutine(resetWidth(this.gameObject));
                 
             }
-            //Rakibin çubuğunu dondurur
+            //Topu çoğaltır
             if (getColor == "RGBA(0.950, 0.610, 0.070, 1.000)")
             {
-                StartCoroutine(freezePlayer(playerObj));
+                for (int i = 0; i < 2; i++)
+                {
+                    Instantiate(cloneBall, new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,gameObject.transform.position.z), Quaternion.identity);
+                }
             }
         }
     }
@@ -77,15 +84,5 @@ public class ApplySkill : MonoBehaviour
             
         }
     }
-
-    IEnumerator freezePlayer(GameObject gameObject)
-    {
-        for(;;)
-        {
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x,0,1);
-            yield return new WaitForSeconds(4);
-            yield break;
-        }
-        
-    }
+    
 }

@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class BallController : MonoBehaviour
 {
-    [SerializeField]private float speed = 7;
+    public float speed = 7;
 
     private Vector2 direction;
 
