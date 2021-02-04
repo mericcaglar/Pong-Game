@@ -16,12 +16,7 @@ public class SkillGenerator : MonoBehaviour
         screenBounds =
             Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         isSkillBallOnScreen = false;
-        Debug.Log("+X ekseni: "+ screenBounds.x);
-        Debug.Log("-X ekseni: "+ screenBounds.x*-1);
-        Debug.Log("----------------------------------------");
-        Debug.Log("+Y ekseni: "+ screenBounds.y);
-        Debug.Log("-Y ekseni: "+ screenBounds.y*-1);
-        
+
     }
 
     
